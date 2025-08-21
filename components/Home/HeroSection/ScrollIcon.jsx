@@ -1,19 +1,20 @@
-"use client";
-import React, { useEffect, useState } from "react";
+"use client"
+import { useEffect, useState } from "react"
 
 const ScrollIcon = () => {
-
   ///////////////////// Scroll Icon ///////////////////////////////////
-  const [hideScrollIcon, setHideScrollIcon] = useState(false);
+  const [hideScrollIcon, setHideScrollIcon] = useState(false)
 
   useEffect(() => {
-    const handleScroll = () => {
-      setHideScrollIcon(window.scrollY > 20);
-    };
+    if (typeof window === "undefined") return
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+    const handleScroll = () => {
+      setHideScrollIcon(window.scrollY > 20)
+    }
+
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
   /////////////////////////////////////////////////////////////////////
 
   return (
@@ -26,7 +27,7 @@ const ScrollIcon = () => {
         <div className="scroller"></div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ScrollIcon;
+export default ScrollIcon

@@ -1,32 +1,23 @@
-"use client";
-import { useAuth } from "@/utils/AuthContext";
-import { LangContext } from "@/utils/langContext";
-import React, { useContext } from "react";
-import LanguageDropdown from "./LanguageDropdown";
-import { useRouter } from "next/navigation";
-import Link from "next/link";
+"use client"
+import { useAuth } from "@/utils/AuthContext"
+import { LangContext } from "@/utils/langContext"
+import { useContext } from "react"
+import LanguageDropdown from "./LanguageDropdown"
+import { useRouter } from "next/navigation"
+import Link from "next/link"
 
 const Authorized = () => {
-  const { user, setLocalUser } = useAuth();
-  const { lang } = useContext(LangContext);
-  const router = useRouter();
-  const userType = localStorage.getItem("userType");
+  const { user, setLocalUser } = useAuth()
+  const { lang } = useContext(LangContext)
+  const router = useRouter()
+  const userType = typeof window !== "undefined" ? localStorage.getItem("userType") : null
   return (
     <div className="invisible">
       {user ? (
         <div className="header-account flex align-center">
-          <a
-            href="#"
-            className="box-avatar dropdown-toggle  bg-white py-1 px-2 rounded-5"
-            data-bs-toggle="dropdown"
-          >
+          <a href="#" className="box-avatar dropdown-toggle  bg-white py-1 px-2 rounded-5" data-bs-toggle="dropdown">
             <div className="avatar avt-40 round dashboard-header-profle">
-              <img
-                alt="avt"
-                src="images/dashboard/agent1.jpg"
-                width={80}
-                height={80}
-              />
+              <img alt="avt" src="images/dashboard/agent1.jpg" width={80} height={80} />
             </div>
             <p className="name">
               {user.name} <i className="fal fa-angle-down" />
@@ -35,28 +26,15 @@ const Authorized = () => {
           <div className="dropdown-menu dashboard-menu mt-3">
             {userType === "vendor" ? (
               <>
-                <form
-                  id="vendor-form"
-                  method="POST"
-                  action="https://develop.sayarti.nl/vendor/login/submit/token"
-                >
+                <form id="vendor-form" method="POST" action="https://develop.sayarti.nl/vendor/login/submit/token">
                   <input
                     type="hidden"
                     name="token"
-                    value={localStorage.getItem("token")}
+                    value={typeof window !== "undefined" ? localStorage.getItem("token") : ""}
                   />
-                  <button
-                    type="submit"
-                    className="border border-0 w-100 text-start bg-white"
-                  >
+                  <button type="submit" className="border border-0 w-100 text-start bg-white">
                     <a className="dropdown-item" href={`/dashboard`}>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width={22}
-                        height={22}
-                        viewBox="0 0 22 22"
-                        fill="none"
-                      >
+                      <svg xmlns="http://www.w3.org/2000/svg" width={22} height={22} viewBox="0 0 22 22" fill="none">
                         <g opacity="0.2">
                           <path
                             d="M6.92479 9.35156V15.64"
@@ -98,13 +76,7 @@ const Authorized = () => {
             ) : (
               <>
                 <Link className="dropdown-item" href={`/dashboard`}>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width={22}
-                    height={22}
-                    viewBox="0 0 22 22"
-                    fill="none"
-                  >
+                  <svg xmlns="http://www.w3.org/2000/svg" width={22} height={22} viewBox="0 0 22 22" fill="none">
                     <g opacity="0.2">
                       <path
                         d="M6.92479 9.35156V15.64"
@@ -141,13 +113,7 @@ const Authorized = () => {
                   Dashboard
                 </Link>
                 <Link className="dropdown-item" href={`/my-listing`}>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width={22}
-                    height={22}
-                    viewBox="0 0 22 22"
-                    fill="none"
-                  >
+                  <svg xmlns="http://www.w3.org/2000/svg" width={22} height={22} viewBox="0 0 22 22" fill="none">
                     <g opacity="0.2">
                       <path
                         d="M10.0135 2.55687H6.58608C3.76733 2.55687 2 4.55245 2 7.37762V14.9988C2 17.824 3.75908 19.8195 6.58608 19.8195H14.6747C17.5027 19.8195 19.2617 17.824 19.2617 14.9988V11.3065"
@@ -177,13 +143,7 @@ const Authorized = () => {
                   My Listing
                 </Link>
                 <Link className="dropdown-item" href={`/my-favorite`}>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width={22}
-                    height={22}
-                    viewBox="0 0 22 22"
-                    fill="none"
-                  >
+                  <svg xmlns="http://www.w3.org/2000/svg" width={22} height={22} viewBox="0 0 22 22" fill="none">
                     <g opacity="0.2">
                       <path
                         fillRule="evenodd"
@@ -206,13 +166,7 @@ const Authorized = () => {
                   My Favorites
                 </Link>
                 <Link className="dropdown-item d-none" href={`/message`}>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width={22}
-                    height={22}
-                    viewBox="0 0 22 22"
-                    fill="none"
-                  >
+                  <svg xmlns="http://www.w3.org/2000/svg" width={22} height={22} viewBox="0 0 22 22" fill="none">
                     <g opacity="0.2">
                       <path
                         fillRule="evenodd"
@@ -249,13 +203,7 @@ const Authorized = () => {
                   Message
                 </Link>
                 <Link className="dropdown-item d-none" href={`/my-review`}>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width={22}
-                    height={22}
-                    viewBox="0 0 22 22"
-                    fill="none"
-                  >
+                  <svg xmlns="http://www.w3.org/2000/svg" width={22} height={22} viewBox="0 0 22 22" fill="none">
                     <g opacity="0.2">
                       <path
                         d="M16.5756 8.11328L12.5026 11.4252C11.7331 12.0357 10.6504 12.0357 9.88082 11.4252L5.77344 8.11328"
@@ -278,13 +226,7 @@ const Authorized = () => {
                   My Reviews
                 </Link>
                 <Link className="dropdown-item" href={`/my-profile`}>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width={22}
-                    height={22}
-                    viewBox="0 0 22 22"
-                    fill="none"
-                  >
+                  <svg xmlns="http://www.w3.org/2000/svg" width={22} height={22} viewBox="0 0 22 22" fill="none">
                     <g opacity="0.2">
                       <path
                         fillRule="evenodd"
@@ -309,13 +251,7 @@ const Authorized = () => {
                   Profile
                 </Link>
                 <Link className="dropdown-item" href={`/change-password`}>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width={22}
-                    height={22}
-                    viewBox="0 0 22 22"
-                    fill="none"
-                  >
+                  <svg xmlns="http://www.w3.org/2000/svg" width={22} height={22} viewBox="0 0 22 22" fill="none">
                     <g opacity="0.2">
                       <path
                         fillRule="evenodd"
@@ -347,20 +283,16 @@ const Authorized = () => {
               className="dropdown-item"
               href="#"
               onClick={() => {
-                localStorage.removeItem("token");
-                localStorage.removeItem("user");
-                localStorage.removeItem("userType");
-                setLocalUser(null);
-                router.push("/");
+                if (typeof window !== "undefined") {
+                  localStorage.removeItem("token")
+                  localStorage.removeItem("user")
+                  localStorage.removeItem("userType")
+                }
+                setLocalUser(null)
+                router.push("/")
               }}
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width={22}
-                height={22}
-                viewBox="0 0 22 22"
-                fill="none"
-              >
+              <svg xmlns="http://www.w3.org/2000/svg" width={22} height={22} viewBox="0 0 22 22" fill="none">
                 <g opacity="0.2">
                   <path
                     d="M13.2237 6.77418V5.91893C13.2237 4.05352 11.7112 2.54102 9.84575 2.54102H5.377C3.5125 2.54102 2 4.05352 2 5.91893V16.1214C2 17.9868 3.5125 19.4993 5.377 19.4993H9.85492C11.7148 19.4993 13.2237 17.9914 13.2237 16.1315V15.2671"
@@ -416,13 +348,7 @@ const Authorized = () => {
           </div>
           <div className="flat-bt-top d-none">
             <Link className="sc-button" href={`/sell-course`}>
-              <svg
-                width={21}
-                height={20}
-                viewBox="0 0 21 20"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
+              <svg width={21} height={20} viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clipPath="url(#clip0_4960_5223)">
                   <path
                     d="M5.91699 13.75H1.33366C1.22315 13.75 1.11717 13.7061 1.03903 13.628C0.960891 13.5498 0.916992 13.4438 0.916992 13.3333C0.916992 13.2228 0.960891 13.1168 1.03903 13.0387C1.11717 12.9606 1.22315 12.9167 1.33366 12.9167H4.91116L3.61033 11.6158C3.37548 11.3824 3.0581 11.251 2.72699 11.25H1.33366C1.22315 11.25 1.11717 11.2061 1.03903 11.128C0.960891 11.0498 0.916992 10.9438 0.916992 10.8333C0.916992 10.7228 0.960891 10.6168 1.03903 10.5387C1.11717 10.4606 1.22315 10.4167 1.33366 10.4167H2.72699C3.28366 10.4167 3.80616 10.6333 4.20033 11.0267L6.21199 13.0383C6.27083 13.0964 6.311 13.1708 6.32737 13.2518C6.34374 13.3329 6.33557 13.417 6.30391 13.4934C6.27224 13.5698 6.21851 13.635 6.14959 13.6807C6.08067 13.7264 5.99969 13.7505 5.91699 13.75ZM5.08366 17.9167H2.58366C1.89449 17.9167 1.33366 17.3558 1.33366 16.6667V15C1.33366 14.8895 1.37756 14.7835 1.4557 14.7054C1.53384 14.6272 1.63982 14.5833 1.75033 14.5833C1.86083 14.5833 1.96681 14.6272 2.04495 14.7054C2.12309 14.7835 2.16699 14.8895 2.16699 15V16.6667C2.16699 16.7772 2.21089 16.8831 2.28903 16.9613C2.36717 17.0394 2.47315 17.0833 2.58366 17.0833H5.08366C5.19417 17.0833 5.30015 17.0394 5.37829 16.9613C5.45643 16.8831 5.50033 16.7772 5.50033 16.6667V15.4167C5.50033 15.3061 5.54422 15.2002 5.62236 15.122C5.7005 15.0439 5.80649 15 5.91699 15C6.0275 15 6.13348 15.0439 6.21162 15.122C6.28976 15.2002 6.33366 15.3061 6.33366 15.4167V16.6667C6.33366 17.3558 5.77283 17.9167 5.08366 17.9167Z"
@@ -439,12 +365,7 @@ const Authorized = () => {
                 </g>
                 <defs>
                   <clipPath>
-                    <rect
-                      width={20}
-                      height={20}
-                      fill="white"
-                      transform="translate(0.5)"
-                    />
+                    <rect width={20} height={20} fill="white" transform="translate(0.5)" />
                   </clipPath>
                 </defs>
               </svg>
@@ -455,7 +376,7 @@ const Authorized = () => {
         </div>
       )}
     </div>
-  );
-};
+  )
+}
 
-export default Authorized;
+export default Authorized

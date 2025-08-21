@@ -1,158 +1,163 @@
+"use client"
+
 function isIn(needle, haystack) {
-  return haystack.indexOf(needle) >= 0;
+  return haystack.indexOf(needle) >= 0
 }
 
 function extend(custom, defaults) {
   for (const key in defaults) {
     if (custom[key] == null) {
-      const value = defaults[key];
-      custom[key] = value;
+      const value = defaults[key]
+      custom[key] = value
     }
   }
-  return custom;
+  return custom
 }
 
 function isMobile(agent) {
-  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-    agent
-  );
+  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(agent)
 }
 
 function createEvent(event, bubble = false, cancel = false, detail = null) {
-  let customEvent;
+  if (typeof document === "undefined") return null
+
+  let customEvent
   if (document.createEvent != null) {
     // W3C DOM
-    customEvent = document.createEvent("CustomEvent");
-    customEvent.initCustomEvent(event, bubble, cancel, detail);
+    customEvent = document.createEvent("CustomEvent")
+    customEvent.initCustomEvent(event, bubble, cancel, detail)
   } else if (document.createEventObject != null) {
     // IE DOM < 9
-    customEvent = document.createEventObject();
-    customEvent.eventType = event;
+    customEvent = document.createEventObject()
+    customEvent.eventType = event
   } else {
-    customEvent.eventName = event;
+    customEvent.eventName = event
   }
 
-  return customEvent;
+  return customEvent
 }
 
 function emitEvent(elem, event) {
+  if (!elem || !event) return
+
   if (elem.dispatchEvent != null) {
     // W3C DOM
-    elem.dispatchEvent(event);
+    elem.dispatchEvent(event)
   } else if (event in (elem != null)) {
-    elem[event]();
+    elem[event]()
   } else if (`on${event}` in (elem != null)) {
-    elem[`on${event}`]();
+    elem[`on${event}`]()
   }
 }
 
 function addEvent(elem, event, fn) {
+  if (!elem) return
+
   if (elem.addEventListener != null) {
     // W3C DOM
-    elem.addEventListener(event, fn, false);
+    elem.addEventListener(event, fn, false)
   } else if (elem.attachEvent != null) {
     // IE DOM
-    elem.attachEvent(`on${event}`, fn);
+    elem.attachEvent(`on${event}`, fn)
   } else {
     // fallback
-    elem[event] = fn;
+    elem[event] = fn
   }
 }
 
 function removeEvent(elem, event, fn) {
+  if (!elem) return
+
   if (elem.removeEventListener != null) {
     // W3C DOM
-    elem.removeEventListener(event, fn, false);
+    elem.removeEventListener(event, fn, false)
   } else if (elem.detachEvent != null) {
     // IE DOM
-    elem.detachEvent(`on${event}`, fn);
+    elem.detachEvent(`on${event}`, fn)
   } else {
     // fallback
-    delete elem[event];
+    delete elem[event]
   }
 }
 
 function getInnerHeight() {
+  if (typeof window === "undefined") return 0
+
   if ("innerHeight" in window) {
-    return window.innerHeight;
+    return window.innerHeight
   }
 
-  return document.documentElement.clientHeight;
+  return document.documentElement.clientHeight
 }
-
 
 // Minimalistic WeakMap shim, just in case.
 const WeakMap =
-  window.WeakMap ||
-  window.MozWeakMap ||
+  (typeof window !== "undefined" && (window.WeakMap || window.MozWeakMap)) ||
   class WeakMap {
     constructor() {
-      this.keys = [];
-      this.values = [];
+      this.keys = []
+      this.values = []
     }
 
     get(key) {
       for (let i = 0; i < this.keys.length; i++) {
-        const item = this.keys[i];
+        const item = this.keys[i]
         if (item === key) {
-          return this.values[i];
+          return this.values[i]
         }
       }
-      return undefined;
+      return undefined
     }
 
     set(key, value) {
       for (let i = 0; i < this.keys.length; i++) {
-        const item = this.keys[i];
+        const item = this.keys[i]
         if (item === key) {
-          this.values[i] = value;
-          return this;
+          this.values[i] = value
+          return this
         }
       }
-      this.keys.push(key);
-      this.values.push(value);
-      return this;
+      this.keys.push(key)
+      this.values.push(value)
+      return this
     }
-  };
+  }
 
 // Dummy MutationObserver, to avoid raising exceptions.
 const MutationObserver =
-  window.MutationObserver ||
-  window.WebkitMutationObserver ||
-  window.MozMutationObserver ||
+  (typeof window !== "undefined" &&
+    (window.MutationObserver || window.WebkitMutationObserver || window.MozMutationObserver)) ||
   class MutationObserver {
     constructor() {
       if (typeof console !== "undefined" && console !== null) {
-        console.warn("MutationObserver is not supported by your browser.");
-        console.warn(
-          "WOW.js cannot detect dom mutations, please call .sync() after loading new content."
-        );
+        console.warn("MutationObserver is not supported by your browser.")
+        console.warn("WOW.js cannot detect dom mutations, please call .sync() after loading new content.")
       }
     }
 
-    static notSupported = true;
+    static notSupported = true
 
     observe() {}
-  };
+  }
 
 // getComputedStyle shim, from http://stackoverflow.com/a/21797294
 const getComputedStyle =
-  window.getComputedStyle ||
+  (typeof window !== "undefined" && window.getComputedStyle) ||
   function getComputedStyle(el) {
-    const getComputedStyleRX = /(\-([a-z]){1})/g;
+    const getComputedStyleRX = /(-([a-z]){1})/g
     return {
       getPropertyValue(prop) {
         if (prop === "float") {
-          prop = "styleFloat";
+          prop = "styleFloat"
         }
         if (getComputedStyleRX.test(prop)) {
-          prop.replace(getComputedStyleRX, (_, _char) => _char.toUpperCase());
+          prop.replace(getComputedStyleRX, (_, _char) => _char.toUpperCase())
         }
-        const { currentStyle } = el;
-        return (currentStyle != null ? currentStyle[prop] : void 0) || null;
+        const { currentStyle } = el
+        return (currentStyle != null ? currentStyle[prop] : void 0) || null
       },
-    };
-  };
+    }
+  }
 
 export default class WOW {
   defaults = {
@@ -163,266 +168,254 @@ export default class WOW {
     live: true,
     callback: null,
     scrollContainer: null,
-  };
+  }
 
   constructor(options = {}) {
-    this.start = this.start.bind(this);
-    this.resetAnimation = this.resetAnimation.bind(this);
-    this.scrollHandler = this.scrollHandler.bind(this);
-    this.scrollCallback = this.scrollCallback.bind(this);
-    this.scrolled = true;
-    this.config = extend(options, this.defaults);
-    if (options.scrollContainer != null) {
-      this.config.scrollContainer = document.querySelector(
-        options.scrollContainer
-      );
+    this.start = this.start.bind(this)
+    this.resetAnimation = this.resetAnimation.bind(this)
+    this.scrollHandler = this.scrollHandler.bind(this)
+    this.scrollCallback = this.scrollCallback.bind(this)
+    this.scrolled = true
+    this.config = extend(options, this.defaults)
+
+    if (options.scrollContainer != null && typeof document !== "undefined") {
+      this.config.scrollContainer = document.querySelector(options.scrollContainer)
     }
     // Map of elements to animation names:
-    this.animationNameCache = new WeakMap();
-    this.wowEvent = createEvent(this.config.boxClass);
+    this.animationNameCache = new WeakMap()
+    this.wowEvent = createEvent(this.config.boxClass)
   }
 
   init() {
-    this.element = window.document.documentElement;
+    if (typeof window === "undefined" || typeof document === "undefined") return
+
+    this.element = window.document.documentElement
     if (isIn(document.readyState, ["interactive", "complete"])) {
-      this.start();
+      this.start()
     } else {
-      addEvent(document, "DOMContentLoaded", this.start);
+      addEvent(document, "DOMContentLoaded", this.start)
     }
-    this.finished = [];
+    this.finished = []
   }
 
   start() {
-    this.stopped = false;
-    this.boxes = [].slice.call(
-      this.element.querySelectorAll(`.${this.config.boxClass}`)
-    );
-    this.all = this.boxes.slice(0);
+    if (typeof window === "undefined" || typeof document === "undefined") return
+
+    this.stopped = false
+    this.boxes = [].slice.call(this.element.querySelectorAll(`.${this.config.boxClass}`))
+    this.all = this.boxes.slice(0)
     if (this.boxes.length) {
       if (this.disabled()) {
-        this.resetStyle();
+        this.resetStyle()
       } else {
         for (let i = 0; i < this.boxes.length; i++) {
-          const box = this.boxes[i];
-          this.applyStyle(box, true);
+          const box = this.boxes[i]
+          this.applyStyle(box, true)
         }
       }
     }
     if (!this.disabled()) {
-      addEvent(
-        this.config.scrollContainer || window,
-        "scroll",
-        this.scrollHandler
-      );
-      addEvent(window, "resize", this.scrollHandler);
-      this.interval = setInterval(this.scrollCallback, 50);
+      addEvent(this.config.scrollContainer || window, "scroll", this.scrollHandler)
+      addEvent(window, "resize", this.scrollHandler)
+      this.interval = setInterval(this.scrollCallback, 50)
     }
     if (this.config.live) {
       const mut = new MutationObserver((records) => {
         for (let j = 0; j < records.length; j++) {
-          const record = records[j];
+          const record = records[j]
           for (let k = 0; k < record.addedNodes.length; k++) {
-            const node = record.addedNodes[k];
-            this.doSync(node);
+            const node = record.addedNodes[k]
+            this.doSync(node)
           }
         }
-        return undefined;
-      });
+        return undefined
+      })
       mut.observe(document.body, {
         childList: true,
         subtree: true,
-      });
+      })
     }
   }
 
   // unbind the scroll event
   stop() {
-    this.stopped = true;
-    removeEvent(
-      this.config.scrollContainer || window,
-      "scroll",
-      this.scrollHandler
-    );
-    removeEvent(window, "resize", this.scrollHandler);
+    this.stopped = true
+    removeEvent(this.config.scrollContainer || window, "scroll", this.scrollHandler)
+    removeEvent(window, "resize", this.scrollHandler)
     if (this.interval != null) {
-      clearInterval(this.interval);
+      clearInterval(this.interval)
     }
   }
 
   sync() {
     if (MutationObserver.notSupported) {
-      this.doSync(this.element);
+      this.doSync(this.element)
     }
   }
 
   doSync(element) {
     if (typeof element === "undefined" || element === null) {
-      ({ element } = this);
+      ;({ element } = this)
     }
     if (element.nodeType !== 1) {
-      return;
+      return
     }
-    element = element.parentNode || element;
-    const iterable = element.querySelectorAll(`.${this.config.boxClass}`);
+    element = element.parentNode || element
+    const iterable = element.querySelectorAll(`.${this.config.boxClass}`)
     for (let i = 0; i < iterable.length; i++) {
-      const box = iterable[i];
+      const box = iterable[i]
       if (!isIn(box, this.all)) {
-        this.boxes.push(box);
-        this.all.push(box);
+        this.boxes.push(box)
+        this.all.push(box)
         if (this.stopped || this.disabled()) {
-          this.resetStyle();
+          this.resetStyle()
         } else {
-          this.applyStyle(box, true);
+          this.applyStyle(box, true)
         }
-        this.scrolled = true;
+        this.scrolled = true
       }
     }
   }
 
   // show box element
   show(box) {
-    this.applyStyle(box);
-    box.className = `${box.className} ${this.config.animateClass}`;
+    this.applyStyle(box)
+    box.className = `${box.className} ${this.config.animateClass}`
     if (this.config.callback != null) {
-      this.config.callback(box);
+      this.config.callback(box)
     }
-    emitEvent(box, this.wowEvent);
+    emitEvent(box, this.wowEvent)
 
-    addEvent(box, "animationend", this.resetAnimation);
-    addEvent(box, "oanimationend", this.resetAnimation);
-    addEvent(box, "webkitAnimationEnd", this.resetAnimation);
-    addEvent(box, "MSAnimationEnd", this.resetAnimation);
+    addEvent(box, "animationend", this.resetAnimation)
+    addEvent(box, "oanimationend", this.resetAnimation)
+    addEvent(box, "webkitAnimationEnd", this.resetAnimation)
+    addEvent(box, "MSAnimationEnd", this.resetAnimation)
 
-    return box;
+    return box
   }
 
   applyStyle(box, hidden) {
-    const duration = box.getAttribute("data-wow-duration");
-    const delay = box.getAttribute("data-wow-delay");
-    const iteration = box.getAttribute("data-wow-iteration");
+    const duration = box.getAttribute("data-wow-duration")
+    const delay = box.getAttribute("data-wow-delay")
+    const iteration = box.getAttribute("data-wow-iteration")
 
-    return this.animate(() =>
-      this.customStyle(box, hidden, duration, delay, iteration)
-    );
+    return this.animate(() => this.customStyle(box, hidden, duration, delay, iteration))
   }
 
   animate = (function animateFactory() {
-    if ("requestAnimationFrame" in window) {
-      return (callback) => window.requestAnimationFrame(callback);
+    if (typeof window !== "undefined" && "requestAnimationFrame" in window) {
+      return (callback) => window.requestAnimationFrame(callback)
     }
-    return (callback) => callback();
-  })();
+    return (callback) => callback()
+  })()
 
   resetStyle() {
     for (let i = 0; i < this.boxes.length; i++) {
-      const box = this.boxes[i];
-      box.style.visibility = "visible";
+      const box = this.boxes[i]
+      box.style.visibility = "visible"
     }
-    return undefined;
+    return undefined
   }
 
   resetAnimation(event) {
     if (event.type.toLowerCase().indexOf("animationend") >= 0) {
-      const target = event.target || event.srcElement;
-      target.className = target.className
-        .replace(this.config.animateClass, "")
-        .trim();
+      const target = event.target || event.srcElement
+      target.className = target.className.replace(this.config.animateClass, "").trim()
     }
   }
 
   customStyle(box, hidden, duration, delay, iteration) {
     if (hidden) {
-      this.cacheAnimationName(box);
+      this.cacheAnimationName(box)
     }
-    box.style.visibility = hidden ? "hidden" : "visible";
+    box.style.visibility = hidden ? "hidden" : "visible"
 
     if (duration) {
-      this.vendorSet(box.style, { animationDuration: duration });
+      this.vendorSet(box.style, { animationDuration: duration })
     }
     if (delay) {
-      this.vendorSet(box.style, { animationDelay: delay });
+      this.vendorSet(box.style, { animationDelay: delay })
     }
     if (iteration) {
-      this.vendorSet(box.style, { animationIterationCount: iteration });
+      this.vendorSet(box.style, { animationIterationCount: iteration })
     }
     this.vendorSet(box.style, {
       animationName: hidden ? "none" : this.cachedAnimationName(box),
-    });
+    })
 
-    return box;
+    return box
   }
 
-  vendors = ["moz", "webkit"];
+  vendors = ["moz", "webkit"]
   vendorSet(elem, properties) {
     for (const name in properties) {
       if (properties.hasOwnProperty(name)) {
-        const value = properties[name];
-        elem[`${name}`] = value;
+        const value = properties[name]
+        elem[`${name}`] = value
         for (let i = 0; i < this.vendors.length; i++) {
-          const vendor = this.vendors[i];
-          elem[`${vendor}${name.charAt(0).toUpperCase()}${name.substr(1)}`] =
-            value;
+          const vendor = this.vendors[i]
+          elem[`${vendor}${name.charAt(0).toUpperCase()}${name.substr(1)}`] = value
         }
       }
     }
   }
   vendorCSS(elem, property) {
-    const style = getComputedStyle(elem);
-    let result = style.getPropertyCSSValue(property);
+    const style = getComputedStyle(elem)
+    let result = style.getPropertyCSSValue(property)
     for (let i = 0; i < this.vendors.length; i++) {
-      const vendor = this.vendors[i];
-      result = result || style.getPropertyCSSValue(`-${vendor}-${property}`);
+      const vendor = this.vendors[i]
+      result = result || style.getPropertyCSSValue(`-${vendor}-${property}`)
     }
-    return result;
+    return result
   }
 
   animationName(box) {
-    let aName;
+    let aName
     try {
-      aName = this.vendorCSS(box, "animation-name").cssText;
+      aName = this.vendorCSS(box, "animation-name").cssText
     } catch (error) {
       // Opera, fall back to plain property value
-      aName = getComputedStyle(box).getPropertyValue("animation-name");
+      aName = getComputedStyle(box).getPropertyValue("animation-name")
     }
 
     if (aName === "none") {
-      return ""; // SVG/Firefox, unable to get animation name?
+      return "" // SVG/Firefox, unable to get animation name?
     }
 
-    return aName;
+    return aName
   }
 
   cacheAnimationName(box) {
     // https://bugzilla.mozilla.org/show_bug.cgi?id=921834
     // box.dataset is not supported for SVG elements in Firefox
-    return this.animationNameCache.set(box, this.animationName(box));
+    return this.animationNameCache.set(box, this.animationName(box))
   }
   cachedAnimationName(box) {
-    return this.animationNameCache.get(box);
+    return this.animationNameCache.get(box)
   }
 
   // fast window.scroll callback
   scrollHandler() {
-    this.scrolled = true;
+    this.scrolled = true
   }
 
   scrollCallback() {
     if (this.scrolled) {
-      this.scrolled = false;
-      const results = [];
+      this.scrolled = false
+      const results = []
       for (let i = 0; i < this.boxes.length; i++) {
-        const box = this.boxes[i];
+        const box = this.boxes[i]
         if (box) {
           if (this.isVisible(box)) {
-            this.show(box);
-            continue;
+            this.show(box)
+            continue
           }
-          results.push(box);
+          results.push(box)
         }
       }
-      this.boxes = results;
+      this.boxes = results
       if (!this.boxes.length && !this.config.live) {
-        this.stop();
+        this.stop()
       }
     }
   }
@@ -433,31 +426,30 @@ export default class WOW {
     // This will use their nearest parent that has an offsetTop.
     // Also, using ('offsetTop' of element) causes an exception in Firefox.
     while (element.offsetTop === undefined) {
-      element = element.parentNode;
+      element = element.parentNode
     }
-    let top = element.offsetTop;
+    let top = element.offsetTop
     while (element.offsetParent) {
-      element = element.offsetParent;
-      top += element.offsetTop;
+      element = element.offsetParent
+      top += element.offsetTop
     }
-    return top;
+    return top
   }
 
   // check if box is visible
   isVisible(box) {
-    const offset = box.getAttribute("data-wow-offset") || this.config.offset;
-    const viewTop =
-      (this.config.scrollContainer && this.config.scrollContainer.scrollTop) ||
-      window.pageYOffset;
-    const viewBottom =
-      viewTop + Math.min(this.element.clientHeight, getInnerHeight()) - offset;
-    const top = this.offsetTop(box);
-    const bottom = top + box.clientHeight;
+    if (typeof window === "undefined") return false
 
-    return top <= viewBottom && bottom >= viewTop;
+    const offset = box.getAttribute("data-wow-offset") || this.config.offset
+    const viewTop = (this.config.scrollContainer && this.config.scrollContainer.scrollTop) || window.pageYOffset
+    const viewBottom = viewTop + Math.min(this.element.clientHeight, getInnerHeight()) - offset
+    const top = this.offsetTop(box)
+    const bottom = top + box.clientHeight
+
+    return top <= viewBottom && bottom >= viewTop
   }
 
   disabled() {
-    return !this.config.mobile && isMobile(navigator.userAgent);
+    return !this.config.mobile && typeof navigator !== "undefined" && isMobile(navigator.userAgent)
   }
 }

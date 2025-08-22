@@ -22,12 +22,12 @@ export default function Header2() {
                   <div className="logo">
                     <Link href={`/`}>
                       <Image
-                
-
-                            className="lazyload"
-                      alt={"mentainance"}
-                      src={"/images/section/course-maintenance.jpg"}
-                      fill
+                        className="lazyload"
+                        data-src="/images/logo/logo@2x.png"
+                        alt=""
+                        width={225}
+                        height={40}
+                        src="/images/logo/logo@2x.png"
                       />
                     </Link>
                   </div>

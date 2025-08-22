@@ -18,9 +18,9 @@ export default function Home() {
   return (
     <div className={""}>
       <div className="header-fixed">
-        {/* <Header1 /> */}
+        <Header1 />
       </div>
-      {/* <Hero /> */}
+      <Hero />
       <OurServices />
       <Teachers />
       <Banner1 />

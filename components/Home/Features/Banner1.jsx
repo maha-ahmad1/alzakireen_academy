@@ -35,8 +35,7 @@ export default function Banner1() {
                       className="lazyload"
                       alt={"mentainance"}
                       src={"/images/section/course-maintenance.jpg"}
-                      width={"100%"}
-                      height={"100%"}
+                      fill
                     />
                   </div>
                   <div className="content justify-content-between align-items-center row gap-5">

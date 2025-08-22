@@ -3,7 +3,7 @@
 import { testimonials } from "@/lib/data/testimonials";
 import { Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import Image from "next/image";
 export default function Testimonials() {
   const swiperOptions = {
     // autoplay: {
@@ -79,7 +79,7 @@ export default function Testimonials() {
                     <p className="fs-16 lh-22 text-color-2">"{elm.text}"</p>
                     <div className="author-box flex">
                       <div className="images">
-                        <img
+                        <Image
                           className="ls-is-cached lazyloaded"
                           alt="images"
                           src={elm.authorImage}

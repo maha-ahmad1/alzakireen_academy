@@ -3,7 +3,7 @@
 import { partnerLogos } from "@/lib/data/brands";
 import { Autoplay, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import Image from "next/image";
 export default function Partners() {
   const swiperOptions = {
     autoplay: {
@@ -59,7 +59,7 @@ export default function Partners() {
                 <SwiperSlide className="swiper-slide" key={index}>
                   <div className="slogan-logo">
                     <a href="#">
-                      <img
+                      <Image
                         className="lazyload partner-logo"
                         data-src={logo.imgSrc}
                         alt={logo.imgAlt}

@@ -5,7 +5,7 @@ import { useContext } from "react"
 import LanguageDropdown from "./LanguageDropdown"
 import { useRouter } from "next/navigation"
 import Link from "next/link"
-
+import Image from "next/image" 
 const Authorized = () => {
   const { user, setLocalUser } = useAuth()
   const { lang } = useContext(LangContext)
@@ -17,7 +17,7 @@ const Authorized = () => {
         <div className="header-account flex align-center">
           <a href="#" className="box-avatar dropdown-toggle  bg-white py-1 px-2 rounded-5" data-bs-toggle="dropdown">
             <div className="avatar avt-40 round dashboard-header-profle">
-              <img alt="avt" src="images/dashboard/agent1.jpg" width={80} height={80} />
+              <Image alt="avt" src="images/dashboard/agent1.jpg" width={80} height={80} />
             </div>
             <p className="name">
               {user.name} <i className="fal fa-angle-down" />

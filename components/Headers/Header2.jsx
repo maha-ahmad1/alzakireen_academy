@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import Nav from "./Nav/Nav";
+import Image from "next/image";
 
 import MobileNav from "./Nav/MobileNav";
 import { useAuth } from "@/utils/AuthContext";
@@ -20,7 +21,7 @@ export default function Header2() {
                 <div className="logo-box flex">
                   <div className="logo">
                     <Link href={`/`}>
-                      <img
+                      <Image
                         className="lazyload"
                         data-src="/images/logo/logo@2x.png"
                         alt=""
@@ -75,7 +76,7 @@ export default function Header2() {
         <nav className="menu-box">
           <div className="nav-logo">
             <Link href={`/`}>
-              <img
+              <Image
                 className="lazyload"
                 data-src="/images/logo/logo@2x.png"
                 alt=""

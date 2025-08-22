@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { EffectFade, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import Image from "next/image";
 
 export default function Banner1() {
   const swiperOptions = {
@@ -31,7 +31,7 @@ export default function Banner1() {
               >
                 <div className="slider-item">
                   <div className="img-slider">
-                    <img
+                    <Image
                       className="lazyload"
                       alt={"mentainance"}
                       src={"/images/section/course-maintenance.jpg"}

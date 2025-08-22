@@ -274,7 +274,7 @@ export default function Footer() {
               <div className="logo-footer style box-1">
                 <Link href={`/`}>
                  <Image
-                    src="/images/logo/logo-footer@2x.png"
+                    src="/logo-footer@2x.png"
                     alt="Alzakireen Academy Logo"
                     width={225}
                     height={40}

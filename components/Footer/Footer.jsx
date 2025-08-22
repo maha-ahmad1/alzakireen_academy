@@ -1,8 +1,9 @@
+import React from "react";
 import Image from "next/image"
-import { footerData } from "@/lib/data/footerLinks"
-import Link from "next/link"
-import EmailForm from "./EmailForm"
-import FooterCollapseHandler from "./FooterCollapseHandler"
+import { footerData } from "@/lib/data/footerLinks";
+import Link from "next/link";
+import EmailForm from "./EmailForm";
+import FooterCollapseHandler from "./FooterCollapseHandler";
 
 export default function Footer() {
   return (
@@ -14,7 +15,13 @@ export default function Footer() {
             <div className="col-lg-3 col-6">
               <div className="box-footer-top flex-three">
                 <div className="icon">
-                  <svg width={70} height={70} viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg
+                    width={70}
+                    height={70}
+                    viewBox="0 0 70 70"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
                     <path
                       d="M39.6766 29.0873C39.9413 29.2638 40.2943 29.1756 40.6472 28.9991C40.9119 28.8226 41.0884 28.4697 41.0002 28.1167L40.1178 22.9108L43.9119 19.2932C44.1766 19.0285 44.2649 18.6756 44.1766 18.4108C44.0884 18.0579 43.8237 17.8814 43.4708 17.7932L38.2649 16.9991L35.9708 12.3226C35.7061 11.705 34.6472 11.705 34.3825 12.3226L32.0884 16.9991L26.8825 17.7932C26.5296 17.8814 26.2649 18.0579 26.1766 18.4108C26.0884 18.7638 26.1766 19.1167 26.4413 19.2932L30.2355 22.9108L29.3531 28.1167C29.2649 28.4697 29.4413 28.8226 29.7061 28.9991C29.9708 29.1756 30.3237 29.2638 30.6766 29.0873L35.3531 26.6167L39.6766 29.0873ZM31.1178 26.705L31.8237 22.8226C31.9119 22.5579 31.7355 22.205 31.559 22.0285L28.7355 19.2932L32.6178 18.7638C32.8825 18.7638 33.1472 18.4991 33.3237 18.3226L35.0884 14.7932L36.8531 18.3226C36.9413 18.5873 37.2061 18.7638 37.559 18.7638L41.4413 19.2932L38.6178 22.0285C38.4413 22.205 38.3531 22.5579 38.3531 22.8226L39.059 26.705L35.6178 24.852C35.5296 24.7638 35.3531 24.7638 35.1766 24.7638C35.0002 24.7638 34.9119 24.7638 34.7355 24.852L31.1178 26.705Z"
                       fill="currentColor"
@@ -34,7 +41,13 @@ export default function Footer() {
             <div className="col-lg-3 col-6">
               <div className="box-footer-top flex-three">
                 <div className="icon">
-                  <svg width={70} height={70} viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg
+                    width={70}
+                    height={70}
+                    viewBox="0 0 70 70"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
                     <mask
                       id="mask0_4570_8679"
                       style={{ maskType: "luminance" }}
@@ -168,7 +181,13 @@ export default function Footer() {
             <div className="col-lg-3 col-6">
               <div className="box-footer-top flex-three">
                 <div className="icon">
-                  <svg width={70} height={70} viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg
+                    width={70}
+                    height={70}
+                    viewBox="0 0 70 70"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
                     <path
                       d="M27.1865 46.1337H27.1866C27.7137 46.1337 28.2041 45.7996 28.3797 45.2731L36.666 20.4139C36.666 20.4139 36.666 20.4139 36.666 20.4139C36.8856 19.7548 36.5294 19.0425 35.8705 18.8228L27.1865 46.1337ZM27.1865 46.1337C27.0553 46.1337 26.9212 46.1129 26.7885 46.0687C26.1296 45.849 25.7735 45.1367 25.9931 44.4777C25.9931 44.4777 25.9931 44.4776 25.9931 44.4776L34.2794 19.6183M27.1865 46.1337L34.2794 19.6183M34.2794 19.6183C34.2794 19.6183 34.2794 19.6183 34.2794 19.6183C34.4991 18.9594 35.2115 18.6032 35.8704 18.8228L34.2794 19.6183ZM46.0466 32.4459C46.0466 35.0775 43.9048 37.2193 41.2732 37.2193C38.6415 37.2193 36.4997 35.0775 36.4997 32.4459C36.4997 29.8142 38.6415 27.6724 41.2732 27.6724C43.9048 27.6724 46.0466 29.8142 46.0466 32.4459ZM43.531 32.4459C43.531 31.2005 42.5186 30.1881 41.2732 30.1881C40.0278 30.1881 39.0154 31.2005 39.0154 32.4459C39.0154 33.6913 40.0278 34.7037 41.2732 34.7037C42.5186 34.7037 43.531 33.6913 43.531 32.4459ZM16.6123 32.4459C16.6123 29.8142 18.7541 27.6724 21.3857 27.6724C24.0175 27.6724 26.1592 29.8142 26.1592 32.4459C26.1592 35.0775 24.0174 37.2193 21.3857 37.2193C18.7541 37.2193 16.6123 35.0775 16.6123 32.4459ZM19.1279 32.4459C19.1279 33.6913 20.1403 34.7037 21.3857 34.7037C22.6313 34.7037 23.6436 33.6913 23.6436 32.4459C23.6436 31.2005 22.6311 30.1881 21.3857 30.1881C20.1403 30.1881 19.1279 31.2005 19.1279 32.4459Z"
                       fill="currentColor"
@@ -190,7 +209,13 @@ export default function Footer() {
             <div className="col-lg-3 col-6">
               <div className="box-footer-top flex-three">
                 <div className="icon">
-                  <svg width={70} height={70} viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg
+                    width={70}
+                    height={70}
+                    viewBox="0 0 70 70"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
                     <path
                       d="M36.0827 14.8407L36.0837 14.8396C36.7357 14.1411 37.1687 13.6191 37.1687 12.8281C37.1687 11.6395 36.1886 10.6594 35 10.6594C33.8114 10.6594 32.8312 11.6395 32.8312 12.8281C32.8312 13.2333 32.4989 13.5656 32.0938 13.5656C31.6886 13.5656 31.3563 13.2333 31.3563 12.8281C31.3563 10.8292 33.0011 9.18438 35 9.18438C36.9989 9.18438 38.6437 10.8292 38.6437 12.8281C38.6437 14.1527 37.954 14.9284 37.2807 15.6856C37.2359 15.7359 37.1913 15.7861 37.1469 15.8364C37.1248 15.8614 37.1028 15.8864 37.0807 15.9113C36.4023 16.6787 35.7375 17.4307 35.7375 18.8281C35.7375 19.2333 35.4052 19.5656 35 19.5656C34.5948 19.5656 34.2625 19.2333 34.2625 18.8281C34.2625 16.8004 35.2453 15.7246 36.0827 14.8407Z"
                       fill="currentColor"
@@ -248,19 +273,20 @@ export default function Footer() {
             <div className="col-lg-4 col-md-12">
               <div className="logo-footer style box-1">
                 <Link href={`/`}>
-                  <Image
+                 <Image
                     src="/images/logo/logo-footer@2x.png"
                     alt="Alzakireen Academy Logo"
                     width={225}
                     height={40}
-                    priority
                   />
                 </Link>
               </div>
             </div>
             <div className="col-lg-8 col-md-12">
               <div className="footer-bottom-right flex-six flex-wrap">
-                <div className="title-bottom center">© 2025 alzakereen. All rights reserved</div>
+                <div className="title-bottom center">
+                  © 2025 alzakereen. All rights reserved
+                </div>
                 <div className="icon-social box-3 text-color-1">
                   <a href="#">
                     <i className="icon-autodeal-facebook" />
@@ -284,5 +310,5 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }

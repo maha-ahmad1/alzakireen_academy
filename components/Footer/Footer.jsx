@@ -273,11 +273,13 @@ export default function Footer() {
             <div className="col-lg-4 col-md-12">
               <div className="logo-footer style box-1">
                 <Link href={`/`}>
-                 <Image
-                    src="/logo-footer@2x.png"
-                    alt="Alzakireen Academy Logo"
+                  <Image
+                    className="lazyload"
+                    data-src="/images/logo/logo-footer@2x.png"
+                    alt="img"
                     width={225}
                     height={40}
+                    src="/images/logo/logo-footer@2x.png"
                   />
                 </Link>
               </div>

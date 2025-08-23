@@ -24,6 +24,9 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "Alzakireen Academy",
   description: "Al Zakireen online Quran learning academy",
+  icons: {
+    icon: "/favicon.png", 
+  },
 };
 
 export default function RootLayout({ children }) {

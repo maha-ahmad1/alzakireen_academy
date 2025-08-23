@@ -275,11 +275,11 @@ export default function Footer() {
                 <Link href={`/`}>
                   <Image
                     className="lazyload"
-                    data-src="/images/logo/logo-footer@2x.png"
+                    data-src="/images/logo/logo_2.png"
                     alt="img"
                     width={225}
                     height={40}
-                    src="/images/logo/logo-footer@2x.png"
+                    src="/images/logo/logo_2.png"
                   />
                 </Link>
               </div>

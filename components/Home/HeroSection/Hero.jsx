@@ -40,14 +40,14 @@ export default function Hero() {
         <FaUserGraduate
           size={50}
           className="mb-2"
-          style={{ color: "#fb7726" }}
+          style={{ color: "#ff595a" }}
         />
       ),
       end: 30,
       label: "Students",
     },
     {
-      icon: <FaHome size={50} className="mb-2" style={{ color: "#fb7726" }} />,
+      icon: <FaHome size={50} className="mb-2" style={{ color: "#ff595a" }} />,
       end: 100,
       label: "Families",
     },
@@ -56,7 +56,7 @@ export default function Hero() {
         <FaGlobeAmericas
           size={50}
           className="mb-2"
-          style={{ color: "#fb7726" }}
+          style={{ color: "#ff595a" }}
         />
       ),
       end: 25,
@@ -64,7 +64,7 @@ export default function Hero() {
     },
     {
       icon: (
-        <FaUserTie size={50} className="mb-2" style={{ color: "#fb7726" }} />
+        <FaUserTie size={50} className="mb-2" style={{ color: "#ff595a" }} />
       ),
       end: 20,
       label: "Teachers",

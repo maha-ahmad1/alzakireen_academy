@@ -656,7 +656,7 @@
   left: 100%;
   top: 0px;
   width: 280px;
-  border-top: 2px solid #FF7101;
+  border-top: 2px solid #ff595a;
   -webkit-transform: scaleY(0);
   -ms-transform: scaleY(0);
   -o-transform: scaleY(0);
@@ -1217,7 +1217,7 @@
 
 .dropdown-menu.dashboard-menu {
   border: none;
-  border-top: 2px solid #FF7101;
+  border-top: 2px solid #ff595a;
   min-width: 240px;
   background: #fff;
   box-shadow: 0px 30px 60px 0px #24272c1a;
@@ -1232,7 +1232,7 @@
     display: block;
 
     &:hover {
-      color: #FF7101;
+      color: #ff595a;
     }
 
     & svg {

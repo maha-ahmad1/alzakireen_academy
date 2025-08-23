@@ -2355,7 +2355,7 @@ body {
 }
 
 .rc-slider .rc-slider-handle {
-  border: solid 2px #FF7101;
+  border: solid 2px #ff595a;
   opacity: 1 !important;
   background-color: #fff !important;
   width: 16px;
@@ -2364,17 +2364,17 @@ body {
 }
 
 .rc-slider .rc-slider-handle:hover {
-  border-color: #FF7101;
+  border-color: #ff595a;
 }
 
 .rc-slider .rc-slider-handle-dragging {
-  border-color: #FF7101 !important;
+  border-color: #ff595a !important;
   box-shadow: none !important;
 }
 
 .rc-slider .rc-slider-track,
 .rc-slider .rc-slider-tracks {
-  background-color: #FF7101;
+  background-color: #ff595a;
 }
 .nice-select {
   span.current {

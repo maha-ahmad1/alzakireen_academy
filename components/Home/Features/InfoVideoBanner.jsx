@@ -20,7 +20,7 @@ const InfoVideoBanner = () => {
 
       {/* Left Content */}
       <div className="col-md-4 mt-5">
-        <h1 className="fw-bold text-orange mb-2" style={{ color: "#ff7107" }}>
+        <h1 className="fw-bold text-orange mb-2" style={{ color: "#ff595a" }}>
           Easy Solution
         </h1>
         <h4 className="text-dark mb-1">Make it simple here</h4>

@@ -22,12 +22,12 @@ export default function Header2() {
                   <div className="logo">
                     <Link href={`/`}>
                       <Image
-                        className="lazyload"
-                        data-src="/images/logo/Artboard1.png"
+                        className=""
+                        data-src="/images/logo/logo_3.png"
                         alt="logo"
                         width={150}
                         height={15}
-                        src="/images/logo/Artboard3.png"
+                        src="/images/logo/logo_3.png"
                       />
                     </Link>
                   </div>
@@ -77,12 +77,12 @@ export default function Header2() {
           <div className="nav-logo">
             <Link href={`/`}>
               <Image
-                className="lazyload"
-                data-src="/images/logo/logo@2x.png"
+                className=""
+                data-src="/images/logo/logo_3.png"
                 alt=""
                 width={197}
                 height={48}
-                src="/images/logo/logo@2x.png"
+                src="/images/logo/logo_3.png"
               />
             </Link>
           </div>

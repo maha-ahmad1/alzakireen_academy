@@ -24,11 +24,11 @@ export default function Header1() {
                     <Link href={`/`}>
                       <img
                         className="lazyload img-none"
-                        data-src="/images/logo/Artboard3.jpg"
+                        data-src="/images/logo/Artboard.png"
                         alt="/Logo"
                         width={225}
                         height={40}
-                        src="/images/logo/Artboard3.jpg"
+                        src="/images/logo/Artboard.png"
                       />
                       {/* <Image
                         className="lazyload img-is-fixed"

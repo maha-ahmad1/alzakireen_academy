@@ -1,7 +1,5 @@
 "use client"
 
-import 'lazysizes';
-
 import { AuthProvider, useAuth } from "@/utils/AuthContext";
 import { LangProvider } from "@/utils/langContext";
 import LogicProvider from "./LogicProvider";

@@ -6,7 +6,7 @@ import "swiper/css/effect-fade";
 import "swiper/css/grid";
 import "photoswipe/style.css";
 import "@/styles/app.scss";
-
+import 'lazysizes';
 // Components Importing
 import Footer from "@/components/Footer/Footer";
 import ClientWrapper from "@/components/Client/ClientWrapper";

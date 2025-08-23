@@ -6,7 +6,6 @@ import MobileNav from "./Nav/MobileNav";
 import Authorized from "./User&Control/Authorized";
 import { useAuth } from "@/utils/AuthContext";
 import Image from "next/image";
-import 'lazysizes';
 
 
 export default function Header1() {

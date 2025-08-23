@@ -43,12 +43,12 @@ export default function Hero() {
           style={{ color: "#fb7726" }}
         />
       ),
-      end: 1500,
+      end: 30,
       label: "Students",
     },
     {
       icon: <FaHome size={50} className="mb-2" style={{ color: "#fb7726" }} />,
-      end: 600,
+      end: 100,
       label: "Families",
     },
     {
@@ -66,7 +66,7 @@ export default function Hero() {
       icon: (
         <FaUserTie size={50} className="mb-2" style={{ color: "#fb7726" }} />
       ),
-      end: 50,
+      end: 20,
       label: "Teachers",
     },
   ];

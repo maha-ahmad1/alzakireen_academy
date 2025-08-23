@@ -6,8 +6,6 @@ import MobileNav from "./Nav/MobileNav";
 import Authorized from "./User&Control/Authorized";
 import { useAuth } from "@/utils/AuthContext";
 import Image from "next/image";
-
-
 export default function Header1() {
     const {user} = useAuth();
   return (
@@ -22,22 +20,20 @@ export default function Header1() {
                 <div className="logo-box flex">
                   <div className="logo">
                     <Link href={`/`}>
-                      <img
-                        className="lazyload img-none"
-                        data-src="/images/logo/Artboard.png"
+                      <Image
+                        className=" img-none"
                         alt="/Logo"
-                        width={225}
-                        height={40}
-                        src="/images/logo/Artboard.png"
+                        width={150}
+                        height={15}
+                        src="/images/logo/Artboard2.png"
                       />
-                      {/* <Image
-                        className="lazyload img-is-fixed"
-                        data-src="/images/logo/Artboard.png"
+                      <Image
+                        className=" img-is-fixed"
                         alt="Logo"
-                        width={225}
-                        height={40}
-                        src="/images/logo/Artboard.png"
-                      /> */}
+                        width={150}
+                        height={15}
+                        src="/images/logo/Artboard1.png"
+                      />
                     </Link>
                   </div>
                 </div>

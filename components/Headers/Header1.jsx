@@ -22,13 +22,21 @@ export default function Header1() {
                 <div className="logo-box flex">
                   <div className="logo">
                     <Link href={`/`}>
-                      <Image
+                      {/* <Image
                         className=""
                         alt="/Logo"
                         width={225}
                         height={40}
                         src="/images/logo/Artboard.png"
-                      />
+                      /> */}
+                         <Image
+                                        className="ls-is-cached lazyloaded"
+                                        data-src="/images/logo/Artboard.png"
+                                        alt="images"
+                                        src="/images/logo/Artboard.png"
+                                        width={615}
+                                        height={890}
+                                      />
                       {/* <Image
                         className="lazyload img-is-fixed"
                         data-src="/images/logo/Artboard.png"

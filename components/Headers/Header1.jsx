@@ -28,14 +28,14 @@ export default function Header1() {
                         height={40}
                         src="/images/logo/Artboard.png"
                       />
-                      {/* <Image
+                      <Image
                         className="lazyload img-is-fixed"
-                        data-src="/images/logo/logo@2x.png"
+                        data-src="/images/logo/Artboard.png"
                         alt="Logo"
                         width={225}
                         height={40}
-                        src="/images/logo/logo@2x.png"
-                      /> */}
+                        src="/images/logo/Artboard.png"
+                      />
                     </Link>
                   </div>
                 </div>

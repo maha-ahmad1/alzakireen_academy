@@ -22,7 +22,7 @@ export default function Header1() {
                 <div className="logo-box flex">
                   <div className="logo">
                     <Link href={`/`}>
-                      <Image
+                      <img
                         className="lazyload img-none"
                         data-src="/images/logo/Artboard3.jpg"
                         alt="/Logo"

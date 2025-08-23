@@ -32,7 +32,7 @@ export default function Header1() {
                         alt="Logo"
                         width={150}
                         height={15}
-                        src="/images/logo/Artboard1.png"
+                        src="/images/logo/Artboard3.png"
                       />
                     </Link>
                   </div>

@@ -27,7 +27,7 @@ export default function Header2() {
                         alt="logo"
                         width={150}
                         height={15}
-                        src="/images/logo/Artboard1.png"
+                        src="/images/logo/Artboard3.png"
                       />
                     </Link>
                   </div>

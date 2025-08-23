@@ -83,7 +83,7 @@ export default function Hero() {
             <div className="slider-item">
               <div className="img-slider">
                 <Image
-                  className="img-item lazyload"
+                  className="img-item "
                   data-src={slide.imgSrc}
                   alt=""
                   src={slide.imgSrc}

@@ -26,6 +26,7 @@ export default function Header1() {
                         width={150}
                         height={15}
                         src="/images/logo/Artboard2.png"
+                        priority
                       />
                       <Image
                         className=" img-is-fixed"
@@ -33,6 +34,7 @@ export default function Header1() {
                         width={150}
                         height={15}
                         src="/images/logo/Artboard3.png"
+                        priority
                       />
                     </Link>
                   </div>

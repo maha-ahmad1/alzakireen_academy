@@ -31,9 +31,9 @@ export default function Features3() {
               <div className="image-inner1 hover-img-wrap img-style-hover">
                 <Image
                   className="ls-is-cached lazyloaded"
-                  data-src="/images/section/wcu-1.jpg"
+                  data-src="/images/section/wcu_1.png"
                   alt="images"
-                  src="/images/section/wcu-1.jpg"
+                  src="/images/section/wcu_1.png"
                   width={615}
                   height={890}
                 />

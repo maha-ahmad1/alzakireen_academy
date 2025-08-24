@@ -194,9 +194,9 @@ export default function Features1() {
               <div className="image-inner1 hover-img-wrap img-style-hover">
                 <Image
                   className="ls-is-cached lazyloaded"
-                  data-src="/images/section/wcu-3.jpg"
+                  data-src="/images/section/wcu_4.png"
                   alt="images"
-                  src="/images/section/wcu-3.jpg"
+                  src="/images/section/wcu_4.png"
                   width={410}
                   height={593}
                 />
@@ -204,9 +204,9 @@ export default function Features1() {
               <div className="image-inner2 hover-img-wrap img-style-hover">
                 <Image
                   className="ls-is-cached lazyloaded"
-                  data-src="/images/section/wcu-4.jpg"
+                  data-src="/images/section/wcu_3.png"
                   alt="images"
-                  src="/images/section/wcu-4.jpg"
+                  src="/images/section/wcu_3.png"
                   width={410}
                   height={593}
                 />

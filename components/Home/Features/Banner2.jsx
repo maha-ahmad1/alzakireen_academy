@@ -25,6 +25,8 @@ export default function Banner2() {
                 <p className="text-color-1">
                   Save time and effort as you no longer need to visit multiple
                   stores to find the right course.
+                  <br/>
+                  <br/>
                 </p>
                 <a href="#" className="find-courses">
                   <span>Find courses</span>

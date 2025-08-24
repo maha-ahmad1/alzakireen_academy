@@ -11,7 +11,7 @@ export default function Teachers() {
               <div className="inner-wrap flex-three">
                 <div className="icon">
                   <Image
-                    src="/images/icons/online-training.png"
+                    src="/images/icons/online-training7.png"
                     alt="Native Arabic-speaking Instructors"
                     width={60}
                     height={60}
@@ -52,7 +52,7 @@ export default function Teachers() {
               <div className="inner-wrap flex-three">
                 <div className="icon">
                   <Image
-                    src="/images/icons/teachers.png"
+                    src="/images/icons/teachers2.png"
                     alt="Qualified teachers"
                     width={60}
                     height={60}

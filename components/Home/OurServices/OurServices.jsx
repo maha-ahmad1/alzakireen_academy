@@ -56,7 +56,7 @@ export default function OurServices() {
               <SwiperSlide className="swiper-slide">
                 <a className="partner-item style-2">
                   <div className="icon flex-five">
-                    <Image src="/images/icons/quran.png" alt="Quran" width={60} height={60} />
+                    <Image src="/images/icons/quran8.png" alt="Quran" width={60} height={60} />
                   </div>
                   <div className="content center">
                     <div className="fs-16 fw-6 title text-color-2 font-2">
@@ -69,7 +69,7 @@ export default function OurServices() {
               <SwiperSlide className="swiper-slide">
                 <a className="partner-item style-2">
                   <div className="icon flex-five">
-                    <Image src="/images/icons/verses.png" alt="Tajweed-Recitation" width={60} height={60} />
+                    <Image src="/images/icons/verses1.png" alt="Tajweed-Recitation" width={60} height={60} />
                   </div>
                   <div className="content center">
                     <div className="fs-16 fw-6 title text-color-2 font-2">
@@ -82,7 +82,7 @@ export default function OurServices() {
               <SwiperSlide className="swiper-slide">
                 <a className="partner-item style-2">
                   <div className="icon flex-five">
-                    <Image src="/images/icons/dhad.png" alt="Arabic-Learning" width={60} height={60} />
+                    <Image src="/images/icons/dhad4.png" alt="Arabic-Learning" width={60} height={60} />
                   </div>
                   <div className="content center">
                     <div className="fs-16 fw-6 title text-color-2 font-2">
@@ -95,7 +95,7 @@ export default function OurServices() {
               <SwiperSlide className="swiper-slide">
                 <a className="partner-item style-2">
                   <div className="icon flex-five">
-                    <Image src="/images/icons/decoration.png" alt="Islamic-Studies" width={60} height={60} />
+                    <Image src="/images/icons/decoration3.png" alt="Islamic-Studies" width={60} height={60} />
                   </div>
                   <div className="content center">
                     <div className="fs-16 fw-6 title text-color-2 font-2">
@@ -108,7 +108,7 @@ export default function OurServices() {
               <SwiperSlide className="swiper-slide">
                 <a className="partner-item style-2">
                   <div className="icon flex-five">
-                    <Image src="/images/icons/graduation-hat.png" alt="School-Support" width={60} height={60} />
+                    <Image src="/images/icons/graduation-hat5.png" alt="School-Support" width={60} height={60} />
                   </div>
                   <div className="content center">
                     <div className="fs-16 fw-6 title text-color-2 font-2">

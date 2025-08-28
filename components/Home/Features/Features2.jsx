@@ -25,9 +25,9 @@ export default function Features2() {
               <div className="image-inner2">
                 <Image
                   className="lazyload"
-                  data-src="/images/section/specs2.png"
+                  data-src="/images/section/specs_2.png"
                   alt="images"
-                  src="/images/section/specs2.png"
+                  src="/images/section/specs_2.png"
                   width={701}
                   height={361}
                 />

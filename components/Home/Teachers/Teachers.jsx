@@ -17,9 +17,7 @@ export default function Teachers() {
                     height={60}
                   />
                 </div>
-                <h3>
-                  Native Arabic-speaking Instructors
-                </h3>
+                <h3>Native Arabic-speaking Instructors</h3>
               </div>
               <div className="content">
                 <p>
@@ -38,12 +36,12 @@ export default function Teachers() {
           <div className="col-md-4">
             <div className="image">
               <Image
-                className="lazyload w-100"
-                data-src="images/img-box/find-course-1.png"
+                className="lazyload w-full h-auto"
+                data-src="images/img-box/find-course.png"
                 alt="images"
-                src="/images/img-box/find-course-1.png"
-                width={315}
-                height={257}
+                src="/images/img-box/find-course.png"
+                width={800}
+                height={600}
               />
             </div>
           </div>
@@ -58,9 +56,7 @@ export default function Teachers() {
                     height={60}
                   />
                 </div>
-                <h3>
-                  Qualified Male & Female Teachers
-                </h3>
+                <h3>Qualified Male & Female Teachers</h3>
               </div>
               <div className="content">
                 <p>

@@ -38,14 +38,14 @@ export default function Features3() {
                   height={890}
                 />
               </div>
-              <div className="image-inner2">
+              <div className="image-inner2 ">
                 <Image
                   className="ls-is-cached lazyloaded"
-                  data-src="/images/section/wcu-2.png"
+                  data-src="/images/section/wcu_2.png"
                   alt="images"
-                  src="/images/section/wcu-2.png"
-                  width={661}
-                  height={307}
+                  src="/images/section/wcu_2.png"
+                  width={400}
+                  height={100}
                 />
               </div>
             </div>

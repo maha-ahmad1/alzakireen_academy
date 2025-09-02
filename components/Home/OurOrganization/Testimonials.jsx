@@ -77,21 +77,12 @@ export default function Testimonials() {
                       </div>
                     </div>
                     <p className="fs-16 lh-22 text-color-2">"{elm.text}"</p>
-                    <div className="author-box flex">
-                      <div className="images">
-                        <Image
-                          className="ls-is-cached lazyloaded"
-                          alt="images"
-                          src={elm.authorImage}
-                          width={57}
-                          height={57}
-                        />
-                      </div>
+                    {/* <div className="author-box flex">
                       <div className="content">
                         <h5>{elm.authorName}</h5>
                         <p className="fs-12 lh-16">{elm.authorTitle}</p>
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 </SwiperSlide>
               ))}

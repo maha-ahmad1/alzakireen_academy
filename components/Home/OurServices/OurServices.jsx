@@ -62,7 +62,6 @@ export default function OurServices() {
                     <div className="fs-16 fw-6 title text-color-2 font-2">
                       Quran Memorization
                     </div>
-                    <span className="sub-title fs-12 fw-4 font-2">271 Teacher</span>
                   </div>
                 </a>
               </SwiperSlide>
@@ -75,7 +74,6 @@ export default function OurServices() {
                     <div className="fs-16 fw-6 title text-color-2 font-2">
                       Tajweed & Recitation
                     </div>
-                    <span className="sub-title fs-12 fw-4 font-2">271 Teacher</span>
                   </div>
                 </a>
               </SwiperSlide>
@@ -88,7 +86,6 @@ export default function OurServices() {
                     <div className="fs-16 fw-6 title text-color-2 font-2">
                       Arabic Language Learning
                     </div>
-                    <span className="sub-title fs-12 fw-4 font-2">271 Teacher</span>
                   </div>
                 </a>
               </SwiperSlide>
@@ -101,7 +98,6 @@ export default function OurServices() {
                     <div className="fs-16 fw-6 title text-color-2 font-2">
                       Islamic Studies
                     </div>
-                    <span className="sub-title fs-12 fw-4 font-2">271 Teacher</span>
                   </div>
                 </a>
               </SwiperSlide>
@@ -114,7 +110,6 @@ export default function OurServices() {
                     <div className="fs-16 fw-6 title text-color-2 font-2">
                     Support school subjects in Arabic
                     </div>
-                    <span className="sub-title fs-12 fw-4 font-2">271 Teacher</span>
                   </div>
                 </a>
               </SwiperSlide>

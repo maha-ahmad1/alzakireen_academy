@@ -38,7 +38,7 @@ export default function ContactPage() {
   };
   return (
     <>
-      <section className="flat-title mb-40">
+      {/* <section className="flat-title mb-40">
         <div className="container2">
           <div className="row">
             <div className="col-lg-12">
@@ -53,7 +53,7 @@ export default function ContactPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       <section className="flat-property">
         <div className="container">
           <div className="row">
@@ -82,7 +82,7 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
-      <section className="tf-section-map">
+      {/* <section className="tf-section-map">
         <div className="container-fluid">
           <div className="map">
             <iframe
@@ -93,7 +93,7 @@ export default function ContactPage() {
             ></iframe>
           </div>
         </div>
-      </section>
+      </section> */}
       <section className="tf-section-contact">
         <div className="container">
           <div className="row">

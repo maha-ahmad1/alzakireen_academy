@@ -40,16 +40,23 @@ export default function Banner1() {
                   </div>
                   <div className="content justify-content-between align-items-center row gap-5">
                     <div className="heading col-md-6">
-                      <h1 className="text-color-1">Learn with Ease from Home</h1>
+                      <h1 className="text-color-1">
+                        Learn with Ease from Home
+                      </h1>
                       <p className="text-color-1 font fw-4">
                         Become part of a growing community of families enjoying
                         Quran, Tajweed, Arabic, and Islamic studies from the
                         comfort of their homes, with guaranteed satisfaction.
                       </p>
                       <div className="btn-wrap">
-                        <Link href="/enrollment" className="sc-button">
+                        <a
+                          href="https://wa.me/201103158843"
+                          className="sc-button"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <span>Join Now</span>
-                        </Link>
+                        </a>
                       </div>
                     </div>
                     <div className="col-md-6">

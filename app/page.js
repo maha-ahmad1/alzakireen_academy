@@ -7,9 +7,9 @@ import Teachers from "@/components/Home/Teachers/Teachers";
 import EnrollmentForm from "@/components/Home/Enrollment/EnrollmentForm";
 import Banner2 from "@/components/Home/Features/Banner2";
 import Banner1 from "@/components/Home/Features/Banner1";
-import InfoVideoBanner from "@/components/Home/Features/InfoVideoBanner";
-import Agents from "@/components/Home/OurOrganization/Agents";
-import Partners from "@/components/Home/OurOrganization/Partners";
+// import InfoVideoBanner from "@/components/Home/Features/InfoVideoBanner";
+// import Agents from "@/components/Home/OurOrganization/Agents";
+// import Partners from "@/components/Home/OurOrganization/Partners";
 import Testimonials from "@/components/Home/OurOrganization/Testimonials";
 import Faqs from "@/components/Home/OurOrganization/FAQs/Faqs";
 import Features1 from "@/components/Home/Features/Features1";
@@ -30,12 +30,12 @@ export default function Home() {
       <Features2 />
       <Banner2 />
       <div className="mt-5 pt-5"></div>
-      <InfoVideoBanner/>
-      <Agents/>
+      {/* <InfoVideoBanner/> */}
+      {/* <Agents/> */}
       <Testimonials/>
       <div className="mt-5 pt-5"></div>
       <Faqs/>
-      <Partners/>
+      {/* <Partners/> */}
       <Footer />
     </div>
   );

@@ -25,10 +25,15 @@ export default function Banner2() {
                 <p className="text-color-1">
                   Save time and effort as you no longer need to visit multiple
                   stores to find the right course.
-                  <br/>
-                  <br/>
+                  <br />
+                  <br />
                 </p>
-                <a href="#" className="find-courses">
+                <a
+                  href="https://wa.me/201103158843"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="find-courses"
+                >
                   <span>Find courses</span>
                   <i className="icon-autodeal-search" />
                 </a>
@@ -52,10 +57,15 @@ export default function Banner2() {
                   <a href="#">Do you want to sell a course?</a>
                 </h3>
                 <p className="text-color-1">
-                  Find your perfect course match and sell your course quickly with our
-                  user-friendly online service.
+                  Find your perfect course match and sell your course quickly
+                  with our user-friendly online service.
                 </p>
-                <a href="#" className="find-courses">
+                <a
+                  href="https://wa.me/201103158843"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="find-courses"
+                >
                   <span>Find courses</span>
                   <i className="icon-autodeal-search" />
                 </a>

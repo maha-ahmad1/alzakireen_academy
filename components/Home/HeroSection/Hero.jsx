@@ -104,12 +104,20 @@ export default function Hero() {
                             {slide.description}
                           </p>
                           <div className="reserve-wrap fade-item fade-item-3">
-                            <Link
-                              href={slide.reserveLink}
-                              className="reserve text-color-1 fs-16 fw-5 font sc-button mt-3 mx-auto"
-                            >
-                              {slide.reserveText}
-                            </Link>
+                            {slide.reserveLink.startsWith("http") ? (
+                              <a
+                                href={slide.reserveLink}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="reserve text-color-1 fs-16 fw-5 font sc-button mt-3 mx-auto"
+                              >
+                                {slide.reserveText}
+                              </a>
+                            ) : (
+                              <Link href={slide.reserveLink} className="reserve text-color-1 fs-16 fw-5 font sc-button mt-3 mx-auto">
+                                  {slide.reserveText}
+                              </Link>
+                            )}
                           </div>
                         </div>
                         <div className="pb-4"></div>

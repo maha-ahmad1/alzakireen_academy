@@ -69,15 +69,7 @@ export default function Testimonials2() {
                     </div>
                     <p className="fs-16 lh-22 text-color-2">"{elm.text}"</p>
                     <div className="author-box flex">
-                      <div className="images">
-                        <Image
-                          className="lazyload"
-                          alt="images"
-                          src={elm.authorImage}
-                          width={120}
-                          height={120}
-                        />
-                      </div>
+                 
                       <div className="content">
                         <h5>{elm.authorName}</h5>
                         <p className="fs-12 lh-16">{elm.authorTitle}</p>

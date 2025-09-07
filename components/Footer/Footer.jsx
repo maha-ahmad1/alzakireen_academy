@@ -19,8 +19,8 @@ export default function Footer() {
                     data-src="/images/Footer/book.png"
                     alt="images"
                     src="/images/Footer/book.png"
-                    width={50}
-                    height={70}
+                    width={60}
+                    height={60}
                   />
                 </div>
                 <div className="content">
@@ -36,8 +36,8 @@ export default function Footer() {
                     data-src="/images/Footer/teacher.png"
                     alt="images"
                     src="/images/Footer/teacher.png"
-                    width={50}
-                    height={70}
+                    width={60}
+                    height={60}
                   />
                 </div>
                 <div className="content">
@@ -53,8 +53,8 @@ export default function Footer() {
                     data-src="/images/Footer/student.png"
                     alt="images"
                     src="/images/Footer/student.png"
-                    width={50}
-                    height={70}
+                    width={60}
+                    height={60}
                   />
                 </div>
                 <div className="content">
@@ -67,11 +67,11 @@ export default function Footer() {
               <div className="box-footer-top flex-three">
                 <div className="icon">
                   <Image
-                    data-src="/images/Footer/globe.png"
+                    data-src="/images/Footer/global.png"
                     alt="images"
-                    src="/images/Footer/globe.png"
-                    width={50}
-                    height={70}
+                    src="/images/Footer/global.png"
+                    width={60}
+                    height={60}
                   />
                 </div>
                 <div className="content">

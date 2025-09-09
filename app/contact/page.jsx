@@ -204,18 +204,17 @@ export default function ContactPage() {
                   <div className="box-info">
                     <h5>Address</h5>
                     <p>
-                      Cairo
+                      New cairo, Egypt
                     </p>
                   </div>
                   <div className="box-info">
                     <h5>Infomation:</h5>
-                    <p>1-333-345-6868</p>
-                    <p>example@gmail.com</p>
+                    <p>+0201013301062</p>
+                    <p>aelnemr610@gmail.com</p>
                   </div>
                   <div className="box-info">
                     <h5>Opentime:</h5>
-                    <p>Monay - Friday: 08:00 - 20:00</p>
-                    <p>Saturday - Sunday: 10:00 - 18:00</p>
+                    <p> 24 hr</p>
                   </div>
                   <div className="box-info">
                     <h5>Follow Us:</h5>

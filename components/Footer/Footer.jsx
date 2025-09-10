@@ -140,21 +140,29 @@ export default function Footer() {
                   © 2025 Alzakereen. All rights reserved
                 </div>
                 <div className="icon-social box-3 text-color-1">
-                  <a href="#">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.facebook.com/profile.php?id=61580314023211&amp%3Bmibextid=ZbWKwL"
+                  >
                     <i className="icon-autodeal-facebook" />
                   </a>
-                  <a href="#">
+                  {/* <a href="#">
                     <i className="icon-autodeal-linkedin" />
-                  </a>
-                  <a href="#">
+                  </a> */}
+                  {/* <a href="#">
                     <i className="icon-autodeal-twitter" />
-                  </a>
-                  <a href="#">
+                  </a> */}
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.instagram.com/alzakireen6/"
+                  >
                     <i className="icon-autodeal-instagram" />
                   </a>
-                  <a href="#">
+                  {/* <a href="#">
                     <i className="icon-autodeal-youtube" />
-                  </a>
+                  </a> */}
                 </div>
               </div>
             </div>

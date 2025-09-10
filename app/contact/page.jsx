@@ -63,16 +63,24 @@ export default function ContactPage() {
                 <div className="social-listing flex-six flex-wrap">
                   <p>Share this page:</p>
                   <div className="icon-social style1">
-                    <a href="#">
+                    <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href="https://www.facebook.com/profile.php?id=61580314023211&amp%3Bmibextid=ZbWKwL"
+                    >
                       <i className="icon-autodeal-facebook" />
                     </a>
-                    <a href="#">
+                    {/* <a href="#">
                       <i className="icon-autodeal-linkedin" />
-                    </a>
-                    <a href="#">
+                    </a> */}
+                    {/* <a href="#">
                       <i className="icon-autodeal-twitter" />
-                    </a>
-                    <a href="#">
+                    </a> */}
+                    <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href="https://www.instagram.com/alzakireen6/"
+                    >
                       <i className="icon-autodeal-instagram" />
                     </a>
                   </div>
@@ -203,14 +211,12 @@ export default function ContactPage() {
                 <div className="wrap-info">
                   <div className="box-info">
                     <h5>Address</h5>
-                    <p>
-                      New cairo, Egypt
-                    </p>
+                    <p>New cairo, Egypt</p>
                   </div>
                   <div className="box-info">
                     <h5>Infomation:</h5>
                     <p>+0201013301062</p>
-                    <p>aelnemr610@gmail.com</p>
+                    <p>alzakireenacademy@gmail.com</p>
                   </div>
                   <div className="box-info">
                     <h5>Opentime:</h5>
@@ -219,16 +225,24 @@ export default function ContactPage() {
                   <div className="box-info">
                     <h5>Follow Us:</h5>
                     <div className="icon-social style2">
-                      <a href="#">
+                      <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://www.facebook.com/profile.php?id=61580314023211&amp%3Bmibextid=ZbWKwL"
+                      >
                         <i className="icon-autodeal-facebook" />
                       </a>
-                      <a href="#">
+                      {/* <a href="#">
                         <i className="icon-autodeal-linkedin" />
-                      </a>
-                      <a href="#">
+                      </a> */}
+                      {/* <a href="#">
                         <i className="icon-autodeal-twitter" />
-                      </a>
-                      <a href="#">
+                      </a> */}
+                      <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://www.instagram.com/alzakireen6/"
+                      >
                         <i className="icon-autodeal-instagram" />
                       </a>
                     </div>

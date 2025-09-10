@@ -18,8 +18,8 @@ export default function ContactPage() {
   const sendMail = (e) => {
     e.preventDefault();
     emailjs
-      .sendForm("service_noj8796", "template_fs3xchn", formRef.current, {
-        publicKey: "iG4SCmR-YtJagQ4gV",
+      .sendForm("service_mg6tp77", "template_ow64mbi", formRef.current, {
+        publicKey: "pLuce3mYE90-WPvxW",
       })
       .then((res) => {
         if (res.status === 200) {

@@ -9,11 +9,11 @@ export default function Faqs() {
         <div className="row">
           <div className="col-lg-12">
             <div className="inner-heading flex-two flex-wrap gap-20">
-              <h1 className="heading-listing">Frequently asked questions</h1>
+              <h1 className="heading-listing">Frequently Asked Questions</h1>
             </div>
           </div>
           <div className="col-lg-12 mb-50">
-            <div className="flat-accordion">
+            <div className="flat-accordion" style={{ whiteSpace: "pre-line" }}>
               <Accordion faqData={toggleItems} />
             </div>
           </div>
